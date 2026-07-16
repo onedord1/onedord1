@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+<title id="title">Animated DevOps platform orbit</title>
+<desc id="desc">A central Kubernetes platform connected to DevOps tools with animated telemetry particles and a clear reserved header zone.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8FBFF"/><stop offset="1" stop-color="#EAF3FF"/></linearGradient>
+  <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#30E6D2"/><stop offset=".5" stop-color="#5CA8FF"/><stop offset="1" stop-color="#D784FF"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#30E6D2" stop-opacity=".2"/><stop offset="1" stop-color="#30E6D2" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8"/></filter>
+  <path id="orbit1" d="M380 280a220 88 0 1 0 440 0a220 88 0 1 0-440 0"/>
+  <path id="orbit2" d="M285 280a315 135 0 1 0 630 0a315 135 0 1 0-630 0"/>
+  <path id="orbit3" d="M180 280a420 170 0 1 0 840 0a420 170 0 1 0-840 0"/>
+</defs>
+<rect width="1200" height="460" rx="24" fill="url(#bg)"/>
+
+<!-- reserved header zone: nothing from the orbit is allowed above y=102 -->
+<text x="50" y="46" fill="#10243E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="800" letter-spacing="2">PLATFORM ORBIT // CLOUD-NATIVE TOOLCHAIN</text>
+<text x="50" y="72" fill="#526B85" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">Every tool maps to delivery, reliability, security or observability—not a random icon wall.</text>
+<path d="M50 94H1150" stroke="#D8E6F4" opacity=".72"/>
+
+<g opacity=".75">
+  <use href="#orbit1" fill="none" stroke="#BED2E8" stroke-width="1.3" stroke-dasharray="5 7"/>
+  <use href="#orbit2" fill="none" stroke="#BED2E8" stroke-width="1.1" stroke-dasharray="3 9"/>
+  <use href="#orbit3" fill="none" stroke="#BED2E8" stroke-width="1" stroke-dasharray="2 11"/>
+</g>
+<ellipse cx="600" cy="280" rx="198" ry="126" fill="url(#halo)" filter="url(#glow)"/>
+
+<!-- central platform core -->
+<g transform="translate(600 280)">
+  <circle r="88" fill="#FFFFFF" stroke="#BED2E8" stroke-width="2"/>
+  <circle r="66" fill="#EDF5FF" stroke="url(#core)" stroke-width="3" stroke-dasharray="9 8">
+    <animateTransform attributeName="transform" type="rotate" values="0;360" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <g>
+    <circle r="34" fill="#326CE5" opacity=".16"/>
+    <circle r="21" fill="none" stroke="#5CA8FF" stroke-width="3"/>
+    <g stroke="#5CA8FF" stroke-width="3" stroke-linecap="round">
+      <path d="M0-31V-20M0 20V31M-31 0H-20M20 0H31M-22-22l8 8M14 14l8 8M22-22l-8 8M-14 14l-8 8"/>
+    </g>
+    <circle r="7" fill="#30E6D2"/>
+    <animateTransform attributeName="transform" type="rotate" values="0;-360" dur="12s" repeatCount="indefinite"/>
+  </g>
+  <rect x="-104" y="45" width="208" height="43" rx="10" fill="#FFFFFF" opacity=".96"/>
+  <text y="63" text-anchor="middle" fill="#10243E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="800">KUBERNETES PLATFORM</text>
+  <text y="80" text-anchor="middle" fill="#526B85" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">secure • observable • recoverable</text>
+</g>
+
+<!-- animated orbit signals -->
+<g fill="#30E6D2">
+  <circle r="5"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#orbit1"/></animateMotion></circle>
+  <circle r="4" fill="#5CA8FF"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite"><mpath href="#orbit2"/></animateMotion></circle>
+  <circle r="4" fill="#D784FF"><animateMotion dur="13s" begin="-7s" repeatCount="indefinite"><mpath href="#orbit3"/></animateMotion></circle>
+  <circle r="8" opacity=".25" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#orbit1"/></animateMotion></circle>
+</g>
+
+<!-- connection spokes terminate at card centers -->
+<g stroke="#BED2E8" opacity=".30" stroke-dasharray="3 8">
+  <path d="M600 280L976 154M600 280L1071 214M600 280L1061 294M600 280L966 386M600 280L748 416M600 280L571 416M600 280L396 348M600 280L326 269M600 280L348 176M600 280L476 130M600 280L636 130M600 280L791 132"/>
+</g>
+
+<g transform="translate(920 130)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#FF9900" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#FF9900" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">AWS</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">AWS</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="2.80s" begin="0.00s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(1000 190)">
+  <rect width="142" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#7B61FF" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#7B61FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="800">OTEL</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">OpenTelemetry</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="3.25s" begin="-1.71s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(1005 270)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#2496ED" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#2496ED" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">DKR</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Docker</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="3.25s" begin="-0.19s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(900 362)">
+  <rect width="132" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#844FBA" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#844FBA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">TF</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Terraform</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="3.70s" begin="-0.38s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(690 392)">
+  <rect width="116" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#EF7B4D" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#EF7B4D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="800">ARGO</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Argo CD</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="4.15s" begin="-0.57s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(505 392)">
+  <rect width="132" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#E6522C" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#E6522C" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="800">PROM</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Prometheus</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="2.80s" begin="-0.76s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(340 324)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#F46800" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#F46800" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="800">GRAF</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Grafana</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="3.25s" begin="-0.95s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(270 245)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#0F1689" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#0F1689" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" font-weight="800">HELM</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Helm</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="4.15s" begin="-2.09s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(292 152)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#EE0000" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#EE0000" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">ANS</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Ansible</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="3.70s" begin="-1.90s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(420 106)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#FC6D26" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#FC6D26" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">GL</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">GitLab</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="3.70s" begin="-1.14s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(580 106)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#D24939" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#D24939" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">JNK</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Jenkins</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="4.15s" begin="-1.33s" repeatCount="indefinite"/>
+</g>
+<g transform="translate(735 108)">
+  <rect width="112" height="48" rx="14" fill="#FFFFFF" stroke="#BED2E8"/>
+  <circle cx="24" cy="24" r="13" fill="#FFD814" opacity=".18"/>
+  <text x="24" y="28" text-anchor="middle" fill="#FFD814" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="800">VLT</text>
+  <text x="45" y="28" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Vault</text>
+  <animate attributeName="opacity" values=".76;1;.76" dur="2.80s" begin="-1.52s" repeatCount="indefinite"/>
+</g>
+<rect x="1" y="1" width="1198" height="458" rx="23" fill="none" stroke="#BED2E8"/>
+</svg>

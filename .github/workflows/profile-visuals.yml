@@ -1,0 +1,87 @@
+name: Refresh profile telemetry
+
+on:
+  schedule:
+    - cron: "23 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/profile-visuals.yml"
+      - ".github/scripts/rainbow_snake.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-telemetry
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v7
+
+      - name: Prepare output directory
+        run: mkdir -p profile
+
+      - name: Generate light GitHub stats
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=FFFFFF&title_color=0969DA&text_color=1F2328&icon_color=1A7F37
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate dark GitHub stats
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=30E6D2&text_color=C9D1D9&icon_color=55E38E
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate light language card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=FFFFFF&title_color=0969DA&text_color=1F2328
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate dark language card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=5CA8FF&text_color=C9D1D9
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate theme-aware contribution snakes
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/github-snake-light.svg?palette=github-light&color_snake=%23ff00ff&color_dots=%23ebedf0,%23c4b5fd,%2393c5fd,%236ee7b7,%23fde047
+            profile/github-snake-dark.svg?palette=github-dark&color_snake=%23ff00ff&color_dots=%23161b22,%234c1d95,%230369a1,%23059669,%23ca8a04
+
+      - name: Transform snake into animated rainbow gradient
+        run: python3 .github/scripts/rainbow_snake.py profile/github-snake-light.svg profile/github-snake-dark.svg
+
+      - name: Commit refreshed telemetry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          if git diff --cached --quiet; then
+            echo "No profile telemetry changed."
+            exit 0
+          fi
+          git commit -m "chore(profile): refresh telemetry and rainbow snake"
+          git push

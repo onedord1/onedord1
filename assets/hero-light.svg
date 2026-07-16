@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<title id="title">Kader Khan DevOps platform engineer profile banner</title>
+<desc id="desc">Animated cloud control plane banner with delivery, Kubernetes, GitOps, observability and recovery signals.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F7FAFF"/>
+    <stop offset="1" stop-color="#EAF3FF"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#30E6D2" stop-opacity=".24"/>
+    <stop offset="1" stop-color="#30E6D2" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#30E6D2"/>
+    <stop offset=".48" stop-color="#5CA8FF"/>
+    <stop offset="1" stop-color="#D784FF"/>
+  </linearGradient>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="8"/>
+  </filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#456A92" flood-opacity="0.16"/>
+  </filter>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M32 0H0V32" fill="none" stroke="#D7E6F6" stroke-width="1" opacity=".42"/>
+  </pattern>
+  <path id="deliveryPath" d="M758 138 C825 138 824 200 892 200 S960 262 1028 262"/>
+</defs>
+<rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+<rect width="1200" height="420" rx="28" fill="url(#grid)" opacity=".72"/>
+<ellipse cx="242" cy="188" rx="275" ry="255" fill="url(#glow)" filter="url(#soft)"/>
+<path d="M0 355 C270 305 420 438 705 360 S1000 315 1200 350 V420 H0Z" fill="#E2EEFB" opacity=".72"/>
+
+<!-- identity -->
+<g transform="translate(70 64)">
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="2">
+    <rect width="288" height="31" rx="15.5" fill="#EEF5FF" stroke="#BDD2EA"/>
+    <circle cx="17" cy="15.5" r="5" fill="#55E38E"><animate attributeName="opacity" values=".35;1;.35" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="32" y="20" fill="#4F6781">PLATFORM STATUS: HEALTHY</text>
+  </g>
+  <text y="89" fill="#10243E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="800" font-size="57" letter-spacing="-2">KADER KHAN</text>
+  <text y="126" fill="url(#accent)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" font-weight="800" letter-spacing="2">PLATFORM ENGINEER // DEVOPS // SRE</text>
+  <text y="171" fill="#4F6781" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18">I build secure, observable and recoverable cloud-native platforms.</text>
+  <g transform="translate(0 211)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700">
+    <g><rect width="122" height="37" rx="9" fill="#FFFFFF" stroke="#BDD2EA"/><text x="15" y="24" fill="#30E6D2">KUBERNETES</text></g>
+    <g transform="translate(136 0)"><rect width="116" height="37" rx="9" fill="#FFFFFF" stroke="#BDD2EA"/><text x="17" y="24" fill="#5CA8FF">TERRAFORM</text></g>
+    <g transform="translate(266 0)"><rect width="89" height="37" rx="9" fill="#FFFFFF" stroke="#BDD2EA"/><text x="24" y="24" fill="#FFB454">AWS</text></g>
+    <g transform="translate(369 0)"><rect width="102" height="37" rx="9" fill="#FFFFFF" stroke="#BDD2EA"/><text x="16" y="24" fill="#D784FF">GITOPS</text></g>
+  </g>
+  <g transform="translate(0 281)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text fill="#4F6781" font-size="13">$ platformctl deploy --strategy=resilient</text>
+    <rect y="12" width="455" height="2" rx="1" fill="#BDD2EA"/>
+    <rect y="12" width="455" height="2" rx="1" fill="url(#accent)">
+      <animate attributeName="width" values="0;455;455" keyTimes="0;.75;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <g transform="translate(0 33)" fill="#55E38E" stroke="#55E38E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 3l3 3 7-8" fill="none"/><text x="15" y="8" stroke="none" font-size="12">delivery verified</text>
+      <path d="M150 3l3 3 7-8" fill="none"/><text x="165" y="8" stroke="none" font-size="12">telemetry linked</text>
+      <path d="M305 3l3 3 7-8" fill="none"/><text x="320" y="8" stroke="none" font-size="12">rollback ready</text>
+    </g>
+  </g>
+</g>
+
+<!-- cloud control plane -->
+<g transform="translate(682 36)" filter="url(#shadow)">
+  <rect width="458" height="344" rx="22" fill="#FFFFFF" stroke="#BDD2EA" stroke-width="1.4"/>
+  <rect width="458" height="48" rx="22" fill="#EEF5FF"/>
+  <path d="M0 48H458" stroke="#BDD2EA"/>
+  <circle cx="24" cy="24" r="5" fill="#FF6B6B"/><circle cx="42" cy="24" r="5" fill="#FFB454"/><circle cx="60" cy="24" r="5" fill="#55E38E"/>
+  <text x="83" y="29" fill="#4F6781" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">cloud-control-plane / production</text>
+
+  <g transform="translate(26 72)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="0" y="15" fill="#4F6781" font-size="11" letter-spacing="1.6">DELIVERY TOPOLOGY</text>
+    <g transform="translate(0 34)">
+      <rect width="126" height="64" rx="12" fill="#EEF5FF" stroke="#BDD2EA"/>
+      <circle cx="22" cy="25" r="10" fill="#5CA8FF" opacity=".2"/><path d="M17 25h10M22 20v10" stroke="#5CA8FF" stroke-width="2"/>
+      <text x="43" y="24" fill="#10243E" font-size="12" font-weight="700">SOURCE</text>
+      <text x="43" y="43" fill="#4F6781" font-size="9">commit / PR</text>
+    </g>
+    <g transform="translate(138 34)">
+      <rect width="126" height="64" rx="12" fill="#EEF5FF" stroke="#BDD2EA"/>
+      <circle cx="22" cy="25" r="10" fill="#D784FF" opacity=".2"/><path d="M16 29l6-11 6 11z" fill="none" stroke="#D784FF" stroke-width="2"/>
+      <text x="43" y="24" fill="#10243E" font-size="12" font-weight="700">GITOPS</text>
+      <text x="43" y="43" fill="#4F6781" font-size="9">desired state</text>
+    </g>
+    <g transform="translate(276 34)">
+      <rect width="126" height="64" rx="12" fill="#EEF5FF" stroke="#BDD2EA"/>
+      <circle cx="22" cy="25" r="10" fill="#30E6D2" opacity=".2"/><path d="M22 17v16M14 25h16M16.5 19.5l11 11M27.5 19.5l-11 11" stroke="#30E6D2" stroke-width="1.5"/>
+      <text x="43" y="24" fill="#10243E" font-size="12" font-weight="700">K8S</text>
+      <text x="43" y="43" fill="#4F6781" font-size="9">runtime</text>
+    </g>
+    <path d="M126 66H138M264 66H276" stroke="#BDD2EA" stroke-width="2" stroke-dasharray="4 4">
+      <animate attributeName="stroke-dashoffset" values="16;0" dur="1.4s" repeatCount="indefinite"/>
+    </path>
+
+    <g transform="translate(0 134)">
+      <rect width="402" height="122" rx="14" fill="#EEF5FF" stroke="#BDD2EA"/>
+      <text x="18" y="25" fill="#4F6781" font-size="10" letter-spacing="1.5">LIVE SLO SIGNALS</text>
+      <g transform="translate(18 43)">
+        <text y="13" fill="#10243E" font-size="11">availability</text><text x="318" y="13" fill="#55E38E" font-size="11">99.95%</text>
+        <rect y="24" width="366" height="7" rx="3.5" fill="#BDD2EA" opacity=".65"/><rect y="24" width="346" height="7" rx="3.5" fill="#55E38E"/>
+        <text y="54" fill="#10243E" font-size="11">delivery health</text><text x="324" y="54" fill="#30E6D2" font-size="11">stable</text>
+        <polyline points="0,78 34,72 68,75 102,60 136,67 170,45 204,55 238,41 272,52 306,30 340,38 366,24" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle r="4" fill="#30E6D2">
+          <animateMotion dur="4.2s" repeatCount="indefinite" path="M0 78 L34 72 L68 75 L102 60 L136 67 L170 45 L204 55 L238 41 L272 52 L306 30 L340 38 L366 24"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+</g>
+
+<!-- moving deployment signal -->
+<circle r="7" fill="#30E6D2" opacity=".25" filter="url(#soft)"><animateMotion dur="4s" repeatCount="indefinite" path="M758 138 C825 138 824 200 892 200 S960 262 1028 262"/></circle>
+<circle r="4" fill="#30E6D2"><animateMotion dur="4s" repeatCount="indefinite" path="M758 138 C825 138 824 200 892 200 S960 262 1028 262"/></circle>
+<rect x="1" y="1" width="1198" height="418" rx="27" fill="none" stroke="#BDD2EA"/>
+</svg>
