@@ -218,17 +218,7 @@ An end-to-end release platform built around **GitLab CI, ArgoCD, Helm, Kubernete
 </tr>
 </table>
 
-## `06 // professional impact`
-
-**DevOps and Cloud Engineer — Anwar Technologies** · `October 2024 — February 2026`
-
-- Architected an end-to-end DevSecOps platform using Terraform, Kubernetes, ArgoCD and GitLab CI.
-- Engineered high-performance CI/CD workflows with parallelization and caching for faster, repeatable delivery.
-- Implemented self-service GitOps deployments, automated reconciliation and rollback workflows.
-- Developed reusable Terraform modules and version-controlled AWS infrastructure templates.
-- Containerized enterprise applications to improve deployment consistency, scalability and resource utilization.
-
-## `07 // live engineering telemetry`
+## `06 // live engineering telemetry`
 
 <div align="center">
   <picture>
